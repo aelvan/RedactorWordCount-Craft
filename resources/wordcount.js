@@ -4,14 +4,18 @@ RedactorPlugins.wordcount = {
 	init: function() {
     var self = this;
     var $box = $(this.getBox());
-    var $wordcount_holder = $('<div class="redactor-wordcount"></div>');
-    $box.append($wordcount_holder);
-    
-    $box.on('keyup', function () {
-      $wordcount_holder.text('Words: ' + self.count());
-    });
-    
-    $wordcount_holder.text('Words: ' + self.count());
+    if ($box.length>0) {
+      if ($box.find('.redactor-wordcount').length==0) {
+        var $wordcount_holder = $('<div class="redactor-wordcount"></div>');
+        $box.append($wordcount_holder);
+        
+        $box.on('keyup', function () {
+          $wordcount_holder.text('Words: ' + self.count());
+        });
+        
+        $wordcount_holder.text('Words: ' + self.count());
+      }
+    }
   },
 
   count: function() {
