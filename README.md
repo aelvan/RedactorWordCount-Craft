@@ -8,6 +8,15 @@ Usage
 ---
 Download the code and put it in a folder named **redactorwordcount** in your craft plugins folder. 
 
+Enable the wordcount plugin in the Redactor configuration. 
+Here's an example (could be myredactor.json in /craft/config/redactor):
+
+    {
+	      buttons: ['formatting','italic','unorderedlist','orderedlist','link','table','html'],
+	      plugins: ['fullscreen', 'wordcount'],
+	      toolbarFixedBox: true,
+    }
+
 That's it.
 
  
