@@ -27,5 +27,8 @@ Todo/plans
 
 Changelog
 ---
+### Version 0.2
+ - Support for Redactor 10 and Craft 2.3+
+ 
 ### Version 0.1
  - Initial public release
