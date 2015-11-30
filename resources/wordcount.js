@@ -4,7 +4,7 @@ RedactorPlugins.wordcount = function () {
   return {
     init: function () {
       var that = this;
-      var $box = $(this.core.getBox());
+      var $box = this.$box;
       
       if ($box.length > 0) {
         if ($box.find('.redactor-wordcount').length == 0) {
